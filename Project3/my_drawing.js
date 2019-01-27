@@ -207,15 +207,19 @@ function move(direct){
 function keydown(event) {
   switch (event.key) {
     case "ArrowDown":
+    case "UIKeyInputDownArrow":
       (event.shiftKey) ? viewer.change_theta(10) : move(false);
       break;
     case "ArrowUp":
+    case "UIKeyInputUpArrow":
       (event.shiftKey) ? viewer.change_theta(-10) : move(true);
       break;
     case "ArrowLeft":
+    case "UIKeyInputLeftArrow":
       (event.shiftKey) ? viewer.change_phi(-10) : body_angle = (body_angle - BODY_ROTATE_STEP ) % 360;
       break;
     case "ArrowRight":
+    case "UIKeyInputRightArrow":
       (event.shiftKey) ? viewer.change_phi(10) : body_angle = (body_angle + BODY_ROTATE_STEP ) % 360;
       break;
     case "a":

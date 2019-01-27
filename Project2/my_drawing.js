@@ -111,15 +111,19 @@ function move(direct){
 function keydown(event) {
   switch (event.key) {
     case "ArrowDown":
+    case "UIKeyInputDownArrow":
       move(false);
       break;
     case "ArrowUp":
+    case "UIKeyInputUpArrow":
       move(true);
       break;
     case "ArrowLeft":
+    case "UIKeyInputLeftArrow":
       body_angle = (body_angle - BODY_ROTATE_STEP ) % 360;
       break;
     case "ArrowRight":
+    case "UIKeyInputRightArrow":
       body_angle = (body_angle + BODY_ROTATE_STEP ) % 360;
       break;
     case "w":
